@@ -1,0 +1,9 @@
+{
+  "name": "a-thousand-words",
+  "version": "0.0.0",
+  "description": "A Thousand Words",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}
