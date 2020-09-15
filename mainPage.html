@@ -7,14 +7,22 @@
 </head>
 <body>
     <label for="fname" id="wordLabel">Enter a word:</label><br>
-    <input type="text" id="word" name="word" value=""><br>
-    <input type="checkbox" id="literal" name="literal" value="true">
-    <label for="literal">Literal rendering</label><br>
-    <button id="submitButton" onclick="testfunc()">Submit</button>
+    <form name="parameters" method="GET" target="_parent" onsubmit="return checkinput()">
+        <input type="text" id="word" name="word" value=""><br>
+        <input type="checkbox" id="literal" name="literal" value="true">
+        <label for="literal">Literal rendering</label><br>
+        <button id="submitButton" onclick="testfunc()">Submit</button><br>
+    </form>
+    <p id="errorText" hidden>Please enter a word!</p>
 </body>
 </html>
 <script>
-    function testfunc() {
-        document.getElementById("submitButton").innerHTML = "TEST";
+    const d = document;
+    function checkinput() {
+        const word = d.forms["parameters"]["word"].value
+        if (word.trim() === "") {
+            d.getElementById("errorText").removeAttribute("hidden")
+            return false
+        }
     }
 </script>
