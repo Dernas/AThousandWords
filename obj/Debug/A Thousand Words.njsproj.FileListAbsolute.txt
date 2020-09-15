@@ -1,3 +1,0 @@
-C:\Users\olori\source\repos\A Thousand Words\obj\Debug\A Thousand Words.njsprojAssemblyReference.cache
-C:\Users\olori\source\repos\A Thousand Words\obj\Debug\A Thousand Words.njsproj.CoreCompileInputs.cache
-C:\Users\olori\source\repos\A Thousand Words\bin\Microsoft.NodejsTools.WebRole.dll

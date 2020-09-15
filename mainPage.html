@@ -6,12 +6,15 @@
     <title>A Thousand Words</title>
 </head>
 <body>
-    <form action="/action_page.php">
-        <label for="fname">Enter a word:</label><br>
-        <input type="text" id="word" name="word" value=""><br>
-        <input type="checkbox" id="literal" name="literal" value="true">
-        <label for="literal">Literal rendering</label><br>
-        <input type="submit" value="Submit">
-    </form>
+    <label for="fname" id="wordLabel">Enter a word:</label><br>
+    <input type="text" id="word" name="word" value=""><br>
+    <input type="checkbox" id="literal" name="literal" value="true">
+    <label for="literal">Literal rendering</label><br>
+    <button id="submitButton" onclick="testfunc()">Submit</button>
 </body>
 </html>
+<script>
+    function testfunc() {
+        document.getElementById("submitButton").innerHTML = "TEST";
+    }
+</script>
