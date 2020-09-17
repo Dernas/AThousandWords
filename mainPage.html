@@ -10,7 +10,7 @@
     <form name="parameters" method="GET" target="_parent" onsubmit="return checkinput()">
         <input type="text" id="word" name="word" value=""><br>
         <input type="checkbox" id="literal" name="literal" value="true">
-        <label for="literal">Literal rendering</label><br>
+        <label for="literal">Take it literally!</label><br>
         <button id="submitButton" onclick="testfunc()">Submit</button><br>
     </form>
     <p id="errorText" hidden>Please enter a word!</p>
@@ -24,5 +24,7 @@
             d.getElementById("errorText").removeAttribute("hidden")
             return false
         }
+        sessionStorage.setItem("word", word)
+        sessionStorage.setItem("literal", d.getElementById("literal").checked)
     }
 </script>
