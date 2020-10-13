@@ -25,5 +25,5 @@ jobs:
           # Rebase takes any changes from master and applies them to this branch
           # If there's no changes, nothing happens
           git branch --set-upstream-to origin/auto_backup
-          git rebase master
+          git rebase origin/master
           git push
