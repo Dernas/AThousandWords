@@ -30,6 +30,5 @@ jobs:
           git fetch origin
           git branch --set-upstream-to origin/auto_backup
           git rebase -s ours origin/master
-          git pull
-          git merge -s ours origin/auto_backup
+          git merge -s ours --allow-unrelated-histories origin/auto_backup
           git push
