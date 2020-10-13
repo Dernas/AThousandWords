@@ -5,8 +5,8 @@ on:
   schedule:
     # * is a special character in YAML so you have to quote this string
     # Currently set to run every 30 mins while I test
-    - cron:  '0,15,30,45 * * * *'
-  workflow_dispatch:
+    - cron:  '*/5 * * * *'
+  #workflow_dispatch:
   
 
 jobs:
