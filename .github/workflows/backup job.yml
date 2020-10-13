@@ -20,11 +20,15 @@ jobs:
         with:
           ref: auto_backup
       - run: |
+          # The config setup uses default Git tokens for the user/pw.
           git config user.name github-actions
           git config user.email github-actions@github.com
           # Rebase takes any changes from master and applies them to this branch
           # If there's no changes, nothing happens
+          # Set the upstream, then use fetch to see the rest of the repo. Rebase, pull in any changes, then push the rebase to update auto_backup.
+          # The net effect grabs any changes from master, pulls them to the local job, then pushes them to the real repo.
           git branch --set-upstream-to origin/auto_backup
           git fetch origin
           git rebase origin/master
+          git pull
           git push
