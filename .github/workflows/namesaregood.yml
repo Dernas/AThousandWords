@@ -17,6 +17,8 @@ jobs:
     steps:
       # Check out repository under $GITHUB_WORKSPACE, so job can access it
       - uses: actions/checkout@v2
+        with:
+          ref: auto_backup
       - run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
