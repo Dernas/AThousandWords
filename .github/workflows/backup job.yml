@@ -29,6 +29,7 @@ jobs:
           # The net effect grabs any changes from master, pulls them to the local job, then pushes them to the real repo.
           git branch --set-upstream-to origin/auto_backup
           git fetch origin
+          git pull
           git rebase -s ours origin/master
           git pull
           git push
