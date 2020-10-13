@@ -2,11 +2,11 @@ name: Auto Backup
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-  workflow_dispatch:
   schedule:
     # * is a special character in YAML so you have to quote this string
     # Currently set to run every 30 mins while I test
     - cron:  '*/5 * * * *'
+  #workflow_dispatch:
   
 
 jobs:
