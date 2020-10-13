@@ -1,4 +1,4 @@
-name: Auto Backup
+name: Auto Backup 2
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
@@ -6,10 +6,16 @@ on:
     # * is a special character in YAML so you have to quote this string
     # Currently set to run every 30 mins while I test
     - cron:  '*/5 * * * *'
-  #workflow_dispatch:
+  workflow_dispatch:
   
 
 jobs:
+  makework:
+    name: works
+    runs-on: ubuntu-latest
+    steps:
+      - run: 
+          echo "test"
   backup:
     name: Daily Backup
     # The type of runner that the job will run on
