@@ -28,8 +28,8 @@ jobs:
           # Set the upstream, then use fetch to see the rest of the repo. Rebase, pull in any changes, then push the rebase to update auto_backup.
           # The net effect grabs any changes from master, pulls them to the local job, then pushes them to the real repo.
           git fetch origin
-          git checkout auto_backup
           git branch --set-upstream-to origin/auto_backup
           git rebase -s ours origin/master
-          #git merge -s ours origin/auto_backup
+          git pull
+          git merge -s ours origin/auto_backup
           git push
